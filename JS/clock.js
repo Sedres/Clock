@@ -12,3 +12,35 @@ const ShowTime = () => {
 }
 
 setInterval(ShowTime, 1000)
+
+let textColorSelected = false
+let boxColorSelected = false
+
+const setStyles = () => {
+  const textColor = document.querySelector('#text-color').value
+  const boxColor = document.querySelector('#box-color').value
+
+  if (textColorSelected || boxColorSelected) {
+    const timeElement = document.querySelector('#time')
+
+    if (textColorSelected) {
+      timeElement.style.color = textColor
+      textColorSelected = true
+    }
+
+    if (boxColorSelected) {
+      timeElement.style.backgroundColor = boxColor
+      boxColorSelected = true
+    }
+  }
+}
+
+document.querySelector('#box-color').addEventListener('input', () => {
+  boxColorSelected = true
+  setStyles()
+})
+
+document.querySelector('#text-color').addEventListener('input', () => {
+  textColorSelected = true
+  setStyles()
+})
