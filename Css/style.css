@@ -38,6 +38,14 @@ body {
   margin: 20px auto;
 }
 
+.settings label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  font-weight: bold;
+  gap: 10px;
+}
 .color {
   width: 40px;
   height: 40px;
