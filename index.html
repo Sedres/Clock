@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="Css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock</title>
@@ -8,9 +9,20 @@
   <body>
     <main>
       <section id="clock">
-        <h1>The time is</h1>
         <h2 id="time">00:00:00</h2>
       </section>
+      <section class="settings">
+        <h2>Settings</h2>
+        <label for="boxColor"
+          >Change Box Color 👉
+          <input type="color" name="boxColor" id="box-color"
+        /></label>
+        <label for="textColor"
+          >Change text Color 👉
+          <input type="color" name="textColor" id="text-color"
+        /></label>
+      </section>
     </main>
+    <script src="Js/clock.js"></script>
   </body>
 </html>
